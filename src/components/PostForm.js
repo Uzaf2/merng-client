@@ -1,4 +1,4 @@
-import {React, useEffect } from 'react';
+import {React } from 'react';
 import { useForm } from '../util/hooks';
 import { useMutation } from '@apollo/react-hooks';
 import Button from '@material-ui/core/Button';

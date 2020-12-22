@@ -62,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
         password: ''
       });
     
-    const [loginUser, { loading }] = useMutation(LOGIN_USER, {
+    const [loginUser] = useMutation(LOGIN_USER, {
         update(_, { data: { login: userData }}){
         context.login(userData);
         props.history.push('/');
@@ -82,7 +82,7 @@ const useStyles = makeStyles((theme) => ({
     return (
         <Container component="main" maxWidth="xs" className={useStyles.container} style={{ marginTop : "100px" }}>
             <CssBaseline />
-            <div className={useStyles.paper} className={useStyles.root}>
+            <div className={useStyles.paper} >
             <Typography component="h1" variant="h5" className={styles.fontType} style={{ marginBottom : "10px" }}>
                    Login
             </Typography>

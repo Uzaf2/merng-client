@@ -55,7 +55,6 @@ const useStyles = makeStyles((theme) => ({
   function Register (props) {
 
     const context = useContext(AuthContext);
-    const authContext = useContext(AuthContext);
     const [errors, setErrors] = useState({});
     
     const { onChange, onSubmit, values } = useForm(registerUser, {
@@ -65,7 +64,7 @@ const useStyles = makeStyles((theme) => ({
         confirmPassword: ''
       });
 
-const [addUser, { loading }] = useMutation(REGISTER_USER, {
+const [addUser] = useMutation(REGISTER_USER, {
   update(_, { data: { register: userData }}){
         context.login(userData);
         props.history.push('/');
@@ -84,7 +83,7 @@ function registerUser() {
     return (
         <Container component="main" maxWidth="xs" className={useStyles.container} style={{ marginTop : "100px" }}>
             <CssBaseline />
-            <div className={useStyles.paper} className={useStyles.root}>
+            <div className={useStyles.paper}>
             <Typography component="h1" variant="h5" className={styles.fontType} style={{ marginBottom : "10px" }}>
                    Sign Up
             </Typography>

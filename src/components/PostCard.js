@@ -5,7 +5,6 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import {Image} from 'semantic-ui-react';
 import moment from 'moment';
-import DeleteIcon from '@material-ui/icons/Delete';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import CommentIcon from '@material-ui/icons/Comment';
@@ -13,8 +12,6 @@ import {makeStyles }from '@material-ui/core/styles';
 import { AuthContext } from '../context/auth';
 import { useHistory } from 'react-router-dom';
 import LikeButton from './LikeButton';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import SinglePost from '../pages/SinglePost';
 import DeletePost from './DeletePost';
 const font =  "'Merriweather', serif";
 

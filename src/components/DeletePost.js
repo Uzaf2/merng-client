@@ -1,24 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import gql from 'graphql-tag';
 import { useMutation } from '@apollo/react-hooks';
 import DeleteIcon from '@material-ui/icons/Delete';
 import Button from '@material-ui/core/Button';
-import {makeStyles }from '@material-ui/core/styles';
 import { FETCH_POSTS_QUERY } from '../util/graphql';
-const useStyles = makeStyles((theme) => ({
-    button: {
-      margin: theme.spacing(1),
-    },
-    deleteButton: {
-      position: "absolute",
-      right: "50px",
-      marginTop: "25px"
-    }
-  }));
 
 function DeletePost({postId})
 {
-    const classes = useStyles();
     const [deletePost] = useMutation(DELETE_POST_MUTATION, {
         variables: { postId: postId
         },
