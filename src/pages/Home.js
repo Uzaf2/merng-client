@@ -12,12 +12,12 @@ import PostForm from '../components/PostForm';
 function Home() {
 
     const { user } = useContext(AuthContext);
-    const {  data } = useQuery(FETCH_POSTS_QUERY);
+    const { loading, data } = useQuery(FETCH_POSTS_QUERY);
   
     if ( data=== undefined )
     {
         return (
-            <p>Loading posts </p>
+            <p>Loading posts, {loading} </p>
 
         )
     }
