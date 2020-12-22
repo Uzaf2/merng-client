@@ -17,7 +17,7 @@ function Home() {
     if ( data=== undefined )
     {
         return (
-            <p>Loading posts, {loading} </p>
+            <p>Loading posts</p>
 
         )
     }
