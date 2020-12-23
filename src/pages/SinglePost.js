@@ -171,8 +171,6 @@ function SinglePost(props){
             <Button size="small" variant="contained"   className={classes.button} startIcon={<CommentIcon/>}>
               { commentCount }
             </Button>
-            <Button size="small" variant="contained"   className={classes.deleteButton} startIcon={<DeleteIcon/>}  >
-            </Button>
             </CardActions>
 
             </Card>
